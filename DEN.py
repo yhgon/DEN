@@ -11,7 +11,12 @@ class DEN(object):
         self.T = 0
         self.task_indices = []
         self.batch_size = config.batch_size
-        self.dims = config.dims
+        self.dims0 = config.dims0
+        self.dims1 = config.dims1
+        self.dims2 = config.dims2
+        self.dims3 = config.dims3
+        nn_shape = [self.dims0, self.dims1, self.dims2, self.dims3]
+        self.dims = nn_shape
         self.params = dict()
         self.ex_k = config.ex_k
         self.param_trained = set()
